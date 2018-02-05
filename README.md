@@ -1,6 +1,6 @@
 # Typescript-Vue-Template
 
-<!-- [![CircleCI](https://circleci.com/gh/Menziess/Typescript-Vue-Template/tree/master.svg?style=svg&circle-token=b40654524090d03bc32187f67738fde5933f6651)](https://circleci.com/gh/Menziess/Typescript-Vue-Template/tree/master) -->
+[![CircleCI](https://circleci.com/gh/Menziess/Typescript-Vue-Template.svg?style=svg)](https://circleci.com/gh/Menziess/Typescript-Vue-Template)
 
 <p align="center"><img width="240" src="public/img/tsvue.png"></p>
 
