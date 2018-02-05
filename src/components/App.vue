@@ -2,6 +2,8 @@
 
 <template>
     <div>
+        <Navbar></Navbar>
+
         <div class="greeting">Hello {{name}}{{exclamationMarks}}</div>
         <button @click="decrement">-</button>
         <button @click="increment">+</button>
@@ -9,32 +11,31 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import { Vue, Component, Prop } from "vue-property-decorator";
+import Navbar from "./Nav.vue";
 
-export default Vue.extend({
-  props: [],
-  data() {
-    return {
-      name: "Stefan",
-      enthusiasm: 1
-    };
-  },
-  methods: {
-    increment() {
-      this.enthusiasm++;
-    },
-    decrement() {
-      if (this.enthusiasm > 1) {
-        this.enthusiasm--;
-      }
-    }
-  },
-  computed: {
-    exclamationMarks(): string {
-      return Array(this.enthusiasm + 1).join("!");
+@Component({
+  components: {
+    Navbar
+  }
+})
+export default class App extends Vue {
+  name: String = "Stefan";
+  enthusiasm: number = 1;
+
+  increment() {
+    this.enthusiasm++;
+  }
+  decrement() {
+    if (this.enthusiasm > 1) {
+      this.enthusiasm--;
     }
   }
-});
+
+  get exclamationMarks(): string {
+    return Array(this.enthusiasm + 1).join("!");
+  }
+}
 </script>
 
 <style>
