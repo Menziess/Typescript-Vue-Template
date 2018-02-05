@@ -14,7 +14,6 @@ jobs:
           command: 'sudo npm install -g npm@latest'
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
-          key: dependency-cache
       - run:
           name: Install npm wee
           command: npm install
@@ -31,7 +30,6 @@ jobs:
           command: 'sudo npm install -g npm@latest'
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
-          key: dependency-cache
       - run:
           name: Install npm wee
           command: npm install

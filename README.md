@@ -31,6 +31,6 @@ Install using npm
 
     npm install
 
-Run using npm
+Run dev for hot reloading
 
-    npm start
+    npm run dev
