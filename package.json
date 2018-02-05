@@ -7,9 +7,11 @@
     "start": "node dist/server.js",
     "dev": "webpack-dev-server --hot",
     "build": "cross-env NODE_ENV=production webpack && tsc",
-    "clean": "rm -rf dist public/js",
+    "clean": "rm -rf dist public/js .nyc_output coverage",
     "pretest": "tslint src/**/*.ts{,x} --config tslint.json --project tsconfig.json",
-    "test": "mocha -r ts-node/register test/**/*.spec.ts --exit",
+    "test": "npm run test:coverage",
+    "test:unit": "mocha -r ts-node/register test/**/*.spec.ts --exit",
+    "test:coverage": "mkdir -p .nyc_output && TS_NODE_COMPILER_OPTIONS='{\"target\":\"es6\"}' nyc --reporter=lcov npm run test:unit",
     "heroku-prebuild": "npm install --only=dev",
     "heroku-postbuild": "cross-env NODE_ENV=production webpack && tsc"
   },
