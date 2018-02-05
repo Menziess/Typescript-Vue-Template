@@ -50,6 +50,18 @@
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.1"
   },
+  "nyc": {
+    "include": [
+      "src/*.ts",
+      "src/**/*.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Menziess/Typescript-Vue-Template/issues"
