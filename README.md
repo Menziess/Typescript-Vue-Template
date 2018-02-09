@@ -27,10 +27,10 @@ Cloning the project:
     git clone git@github.com:Menziess/Typescript-Vue-Template.git
     cd Typescript-Vue-Template
 
-Install using npm
+Install using yarn
 
-    npm install
+    yarn
 
 Run dev for hot reloading
 
-    npm run dev
+    yarn dev
